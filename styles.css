@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Archangelsk', sans-serif; /* Шрифт для всей страницы */
+    line-height: 1.6; /* Высота строки */
+    max-width: 2000px;
+    margin: auto;
+}
+
+.section-hero {
+    background-image: url("./images/11.jpg");
+    padding: 1% 16%;
+    height: 1000px;
+    position: relative;
+    animation: slider 30s infinite; /* Добавляем анимацию */
+}
+
+@keyframes slider {
+    0% {
+      background-image: url("./images/11.jpg");
+    }
+    33% {
+      background-image: url("./images/11.jpg");
+    }
+    33.00001% {
+      background-image: url("./images/2nd.jpg");
+    }
+    66% {
+      background-image: url("./images/2nd.jpg");
+    }
+    66.00001% {
+      background-image: url("./images/third.jpg");
+    }
+    99% {
+      background-image: url("./images/third.jpg");
+    }
+    100% {
+      background-image: url("./images/11.jpg"); /* возврат к первой */
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25%;
+}
+
+ul img {
+    width: 28.36px;
+}
+
+.get-info {
+    background-color: #F8F200;
+    padding: 50px;
+    position: absolute;
+    top: 65%;
+    left: 51%;
+
+
+    clip-path: polygon(
+        40px 0,                  /* отодвигаем верхний левый угол на 40px вправо */
+        100% 0,                  /* верхний правый угол без среза */
+        100% calc(100% - 40px),  /* срезаем нижний правый угол на 40px сверху */
+        calc(100% - 40px) 100%,  /* смещаем нижний правый угол на 40px влево */
+        0 100%,                  /* нижний левый угол без среза */
+        0 40px                   /* срезаем верхний левый угол на 40px снизу */
+      );
+}
+
+.get-info p {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 100%;
+}
+
+.get-info button {
+    padding: 19px 50px;
+    background-color: black;
+    color: #F8F200;
+}
+
+@media(max-width: 700px) {
+    .section-hero {
+        padding: 6% 4%;
+        display: flex;
+        background-position: center;
+        background-size: cover;
+    }
+
+    header {
+        display: block;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    .get-info {
+        top: 85%;
+        left: 0%;
+        padding-left: 80px;
+        width: 100%;
+       text-align: center;
+       font-size: 30px;
+    }
+
+    .get-info button {
+        width: 80%;
+        font-size: 20px;
+    }
+
+
+}
+
+.section-night {
+    padding: 3% 16%;
+}
+.main-info {
+    width: 80%;
+    margin-bottom: 70px;
+}
+
+.text-night-city {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cyber {
+    color: black;
+}
+
+@media(max-width: 700px) {
+    .section-night {
+        padding: 40% 0 15% 0;
+    }
+
+    .main-info {
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .text-night-city {
+        font-size: 30px;
+        font-weight: 700;
+        width: 70%;
+    }
+
+    .cyber {
+        color: #52BDEC;
+        font-weight: 600;
+    }
+
+    .subtitle {
+        color: #777777;
+        line-height: 50px;
+        font-size: 25px;
+    }
+
+    .pictures {
+        display: block;
+    }
+
+    .twins img {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+ 
+}
+
+.section-game {
+    background-color: black;
+    color: white;
+    padding-bottom: 3%;
+}
+
+.game-upper-part {
+    padding: 1% 16%;
+}
+
+.blur {
+    width: 100%;
+}
+
+.game-title {
+    display: flex;
+    width: 60%;
+}
+
+.game-title p {
+    margin-left: 32px;
+    margin-top: 55px;
+    font-size: 50px;
+}
+
+.game-subtitle {
+    width: 65%;
+    margin-top: 25px;
+}
+
+span {
+    color:  rgb(65, 176, 229);
+}
+
+.game-down-part {
+    display: flex;
+    padding: 0 16%;
+}
+
+.form {
+    width: 30%;
+    margin-right: 32px;
+    margin-top: 73px;
+}
+
+.form p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.form-q {
+    padding-bottom: 1%;
+    border-bottom: 1px solid white;
+    margin-bottom: 35px;
+}
+
+.form-box {
+    width: 90%;               /* Ширина области, можно менять */       /* Максимальная ширина, чтобы не растягивалось слишком сильно */
+    margin: 35px auto;        /* Отступы сверху/снизу и выравнивание по центру */
+    padding: 40px;            /* Внутренние отступы */
+    border: 0.5px dashed #fff;  /* Пунктирная белая рамка */   /* Тёмный фон (черный) */
+    color: #fff;              /* Белый цвет текста */
+    text-align: center;       /* Текст по центру */  /* Учитываем бордер и паддинги в расчёте ширины */
+    font-size: 18px;          /* Размер шрифта */
+}
+
+.form button {
+    padding: 19px 50px;
+    color: black;
+    background-color: #F8F200;
+    border: none;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.form-click {
+    display: flex;
+    width: 74%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-click p {
+    font-size: 12px;
+}
+
+input[type="checkbox"] {
+    /* Убираем дефолтный вид чекбокса в большинстве современных браузеров */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Задаём размер и фон */
+    width: 15px;
+    height: 15px;
+  
+    background-color: black; /* Чёрный фон */
+    border: 2px solid #F8F200 ;  /* Белая рамка (можно поменять на другой цвет) */
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: "✔";
+    display: block;
+    text-align: center;
+    color: #F8F200;
+    font-size: 14px;    /* чуть меньше, чтобы поместилось */
+    line-height: 15px;  /* совпадает с высотой чекбокса */
+}
+
+@media(max-width: 700px) {
+
+}
+
+.section-yellow {
+    background-color: #F8F200;
+    padding-bottom: 4%;
+}
+
+.yellow-content {
+    padding: 0 16%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tv-img {
+    margin-bottom: 20px;
+}
+
+.logos-img {
+    display: flex;
+    justify-content: center;
+}
+
+.logos-img img {
+    margin-right: 20px;
+}
+
+.yellow-info {
+    width: 50%;
+}
+
+.yellow-title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 25px;
+    width: 95%;
+}
+
+.yellow-subtitle {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 25px;
+}
+
+.benefits {
+    width: 60%;
+}
+.each-benefit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.each-benefit img {
+    margin-right: 10px;
+}
+
+.last-benefit {
+    margin-bottom: 40px;
+}
+
+.yellow-info button {
+    padding: 19px 50px;
+    color: #F8F200;
+    background-color: black;
+    border: none;
+}
+
+.section-buy {
+    background-color: black;
+    display: flex;
+}
+
+.last {
+    padding-left: 32px;
+    padding-top: 70px;
+    padding-right: 250px;
+    color: white;
+}
+
+.last-title {
+    line-height: 100%;
+    font-weight: 600;
+    padding-right: 100px;
+}
+
+.last-benefits {
+    margin-top: 15px;
+}
+
+.span-last {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+footer {
+    background-color: white;
+}
+
+.footer-box {
+    padding: 2% 16%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-images {
+    width: 39%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-texts {
+    display: flex;
+    justify-content: space-between;
+    width: 26%;
+}
+
+
