@@ -149,6 +149,9 @@ ul img {
     font-size: 18px;
 }
 
+.imgHeight {
+    display: none;
+}
 .pictures {
     display: flex;
     justify-content: space-between;
@@ -161,7 +164,7 @@ ul img {
 
 @media(max-width: 700px) {
     .section-night {
-        padding: 40% 0 15% 0;
+        padding: 40% 0 20% 0;
     }
 
     .main-info {
@@ -185,6 +188,14 @@ ul img {
         color: #777777;
         line-height: 50px;
         font-size: 25px;
+    }
+    
+    .imgWidth {
+        display: none;
+    }
+    .imgHeight {
+        display: block;
+        width: 100%;
     }
 
     .pictures {
