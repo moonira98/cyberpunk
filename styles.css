@@ -223,6 +223,10 @@ ul img {
     width: 100%;
 }
 
+.small-playstation {
+    display: none;
+}
+
 .game-title {
     display: flex;
     width: 60%;
@@ -322,7 +326,56 @@ input[type="checkbox"] {
 }
 
 @media(max-width: 700px) {
+    .game-upper-part {
+        padding: 0 4%;
+    }
 
+    .star {
+        width: 100px;
+    }
+
+    .game-title {
+        display: block;
+        width: 100%;
+    }
+
+    .small-playstation {
+        display: block;
+        width: 100%;
+      
+    }
+
+    .game-title p {
+       margin: 15px 0;
+    }
+
+    .game-subtitle {
+        width: 95%;
+        line-height: 32px;
+        font-size: 20px;
+    }
+
+    .game-down-part {
+        display: block;
+        padding: 0 4%;
+    }
+
+    .form {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+
+    .form button {
+        padding: 20.5px 50px;
+    }
+
+    .big-playstation {
+        display: none;
+    }
 }
 
 .section-yellow {
@@ -393,6 +446,43 @@ input[type="checkbox"] {
     border: none;
 }
 
+
+
+@media(max-width: 700px) {
+    .yellow-content {
+        display: block;
+        padding: 0 4%;
+    }
+
+    .tv-img {
+        width: 100%;
+        }
+
+    .images-yellow {
+        width: 100%;
+    }
+
+    .logo-main-img {
+        width: 50%;
+    }
+
+    .logo-img {
+        width: 20%;
+        
+    }
+
+    .yellow-info {
+        width: 100%;
+        margin-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .yellow-title {
+        width: 100%;
+        font-size: 40px;
+    }
+}
+
 .section-buy {
     background-color: black;
     display: flex;
@@ -420,6 +510,54 @@ input[type="checkbox"] {
     font-weight: 400;
 }
 
+.pictures-logos {
+    margin-top: 30px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    gap: 60px;
+    align-items: center-;
+}
+
+
+@media(max-width: 700px) {
+    .section-buy {
+        display: block;
+        width: 100%;
+    }
+
+    .section-buy img {
+        width: 100%;
+    }
+
+    .last {
+        width: 100%;
+        padding: 0 4%;
+    }
+
+    .last-benefits {
+        width: 100%;
+    }
+
+    .last-benefits img {
+        width: 24px;
+    }
+    .companies {
+        width: 80px;
+    }
+
+    .pictures-logos {
+        margin-top: 30px;
+        padding-bottom: 70px;
+        display: grid;
+        grid-template-columns: 20% 50%;
+        gap: 60px;
+        align-items: center;
+    }
+
+   
+}
+
 footer {
     background-color: white;
 }
@@ -441,6 +579,29 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 26%;
+}
+
+@media(max-width: 700px) {
+    .footer-box {
+        padding: 10% 20% ;
+        display: block;
+        align-items: center;
+ 
+    }
+
+    .footer-images {
+        display: block;
+    }
+
+    .bird {
+        margin-left: 60px;
+        margin-top: 50px;
+    }
+
+    .footer-texts {
+        display: none;
+       
+    }
 }
 
 
